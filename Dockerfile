@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 
 # Server installation
+ADD	pynaoqi-python2.7-2.1.4.13-linux64.tar.gz pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
 RUN apt update \
   && apt upgrade -y \
   && apt install -y sudo htop curl ufw \
