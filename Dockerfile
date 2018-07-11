@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update \
   && apt upgrade -y \
   && apt install -y sudo htop curl ufw \
-  && apt install -y python2.7 phyton-pip \
+  && apt install -y python2.7 python-pip \
   && apt install -y apache2 mysql-server libapache2-mod-php php-mysql
   
 # Firewall configuration  
