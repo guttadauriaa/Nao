@@ -9,4 +9,4 @@ RUN apt update \
   && apt install -y apache2 mysql-server libapache2-mod-php php-mysql php-mbstring php-gettext phpmyadmin 
   
 # Firewall configuration  
-RUN ufw allow in "Apache Full"
+RUN sudo ufw allow in "Apache Full"
