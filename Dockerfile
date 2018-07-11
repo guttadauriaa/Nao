@@ -9,7 +9,12 @@ RUN apt update \
   && add-apt-repository ppa:certbot/certbot \
   && apt update \
   && apt install -y python2.7 python-pip python-certbot-apache \
-  && apt install -y apache2 mysql-server libapache2-mod-php php-mysql php-mbstring php-json php-gettext phpmyadmin 
+  && apt install -y apache2 mysql-server libapache2-mod-php php-mysql php-mbstring php-json php-gettext 
+  
+
+RUN find /var/lib/mysql -type f -exec touch {} \; \
+  && /etc/init.d/mysql start \
+  && apt install -y phpmyadmin 
   
 # Firewall configuration  
 #RUN sudo ufw allow ssh \
