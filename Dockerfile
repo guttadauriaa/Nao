@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Server installation
 RUN apt update \
-  && apt install apache2 mysql-server libapache2-mod-php php-mysql
+  && apt install -y apache2 mysql-server libapache2-mod-php php-mysql
   
 # Firewall configuration  
 RUN ufw allow in "Apache Full"
